@@ -23,6 +23,25 @@ async ()=>{
     })
 
 
-    console.log(user);
-    
+    // console.log(user);
+//el find me envia un arreglo de objetos
+  const users = await  User.find({
+        name:'Juan'
+    });
+    console.log(users);
+
+    // const usersUpdate = await User.updateMany({
+    //     name: 'Juan',
+    //     lastname:'perez',
+    // },
+    // {
+    //     role:'Admin',
+    // })
+    // console.log(usersUpdate)
+
+    const userDelet = await User.deleteOne({
+        name:'Juan',
+    });
+    console.log(userDelet)
+
 })
